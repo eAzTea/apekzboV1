@@ -11,18 +11,20 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 
-
 @client.event
-async def on_member_join(member):
-    print('Recognised that a member called ' + member.name + ' joined')
-    print('Sent message to ' + member.name)
 async def on_ready():
-    await client.change_presence(game=Game(name='Willkommen in Apekz Clan'))
-    print('Ready, Freddy') 
+    print('Bot online!')
 
-
-@client.event
-async def on_message(message):
-    if message.content == '$help':
-        await client.send_message(message.channel,'Wenn du neu bist melde dich zuerst bei einen Operator!')
-client.run('NTIyNzg5Njc5ODcxODE5Nzg2.DvQFhw.INWP8K064raDypBIw5lw50ztT8M')
+@client.command()
+async def status(ctx):
+    await ctx.author.send('Status: https://teatimemodding.wixsite.com/modmenus/status')
+@client.command()
+async def sc(ctx):
+    await ctx.author.send('Add me on Social Club: https://boost.ink/-t1z9')
+@client.command()
+async def website(ctx):
+    await ctx.author.send('Modmenu Website: https://teatimemodding.wixsite.com/modmenus')
+@client.command()
+async def com(ctx):
+    await ctx.author.send('``` BOT COMMANDS: !sc (Send you the Link for my Socialclubname) | !status (Send you the Link to the Status from the Modmenus) | !website(Send you the Link for my Website) ```')
+client.run('NjQ1MzIzMzI3NDM0NTIyNjU0.XdBcUg.uj2XQuDd2OurJuKeCyuZebZd2TY')
