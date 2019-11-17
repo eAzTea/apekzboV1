@@ -27,4 +27,4 @@ async def website(ctx):
 @client.command()
 async def com(ctx):
     await ctx.author.send('``` BOT COMMANDS: !sc (Send you the Link for my Socialclubname) | !status (Send you the Link to the Status from the Modmenus) | !website(Send you the Link for my Website) ```')
-client.run('NjQ1MzIzMzI3NDM0NTIyNjU0.XdBcUg.uj2XQuDd2OurJuKeCyuZebZd2TY')
+client.run('TOKEN')
