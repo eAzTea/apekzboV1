@@ -1,1 +1,1 @@
-worker: python Apekzbotpy
+worker: python3 Apekzbotpy
